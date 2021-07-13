@@ -1,0 +1,26 @@
+import styled from 'styled-components';
+
+const MainGrid = styled.main`
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    display: grid;
+    padding: 16px;
+    grid-gap: 10px;
+    .profileArena{
+        display:none;
+        @media(min-width: 860px){
+            display: block;
+        }
+    }
+
+    @media(min-width: 860px){
+        max-width: 1100px;
+        display: grid;
+        grid-template-areas: "profileArea contentArea comunityArea";
+        grid-template-columns: 160px 1fr 312px;
+    }
+`;
+
+export default MainGrid
